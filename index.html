@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Iyanuoluwa Owolabi | Full-Stack Developer & Cybersecurity Specialist</title>
   
   <!-- Tailwind CSS CDN -->
@@ -11,6 +11,7 @@
   <!-- Font Awesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" href="Pasted image.png" type="image/x-icon">
+  
   <!-- Primary Meta Tags -->
   <meta name="title" content="Iyanuoluwa Owolabi | StealthByte — Full-Stack Developer & Security Researcher">
   <meta name="description" content="Official portfolio of Iyanuoluwa Owolabi (StealthByte). Full-Stack Web Developer and Cybersecurity Specialist delivering resilient architectures, API hardening, and security assessments.">
@@ -33,6 +34,7 @@
 
   <!-- Canonical Link -->
   <link rel="canonical" href="https://stealth-byte7.github.io/">
+
   <!-- Google Fonts: Manrope & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,10 +65,18 @@
   </script>
 
   <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
     body {
       background-color: #040812;
       color: #e2e8f0;
-      overflow-x: hidden;
     }
     
     .cyber-grid {
@@ -81,8 +91,8 @@
     }
     
     .terminal-scrollbar::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
+      width: 4px;
+      height: 4px;
     }
     
     .terminal-scrollbar::-webkit-scrollbar-track {
@@ -111,16 +121,16 @@
   </style>
 </head>
 
-<body class="font-sans antialiased selection:bg-cyan-500 selection:text-black cyber-grid min-h-screen relative">
+<body class="font-sans antialiased selection:bg-cyan-500 selection:text-black cyber-grid min-h-screen relative w-full overflow-x-hidden">
 
   <!-- Top Navigation Header -->
   <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-[#040812]/90 border-b border-cyan-950/80" id="main-nav">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
       
       <!-- Brand Logo (Pure StealthByte Glyph) -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500/20 via-cyan-500/10 to-transparent border border-cyan-500/40 flex items-center justify-center font-mono font-bold text-cyan-400 group-hover:scale-105 transition-transform">
-          <svg class="w-6 h-6" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3 group">
+        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-cyan-500/20 via-cyan-500/10 to-transparent border border-cyan-500/40 flex items-center justify-center font-mono font-bold text-cyan-400 group-hover:scale-105 transition-transform shrink-0">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="25" y="10" width="50" height="15" rx="4" fill="#00a6ff"/>
             <rect x="10" y="30" width="25" height="15" rx="3" fill="#00a6ff"/>
             <rect x="70" y="30" width="20" height="15" rx="3" fill="#00a6ff"/>
@@ -131,13 +141,13 @@
           </svg>
         </div>
         <div class="flex flex-col">
-          <span class="font-bold text-base tracking-wider text-slate-100 group-hover:text-cyan-400 transition-colors font-mono">STEALTH<span class="text-cyan-400">.BYTE</span></span>
-          <span class="text-[10px] text-slate-400 tracking-widest font-mono uppercase">Dev &amp; Security Practitioner</span>
+          <span class="font-bold text-sm sm:text-base tracking-wider text-slate-100 group-hover:text-cyan-400 transition-colors font-mono leading-tight">STEALTH<span class="text-cyan-400">.BYTE</span></span>
+          <span class="text-[9px] sm:text-[10px] text-slate-400 tracking-wider font-mono uppercase">Dev &amp; Security Practitioner</span>
         </div>
       </a>
 
       <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-mono text-slate-300">
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-mono text-slate-300">
         <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
         <a href="#skills" class="hover:text-cyan-400 transition-colors">Arsenal</a>
         <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
@@ -146,8 +156,8 @@
       </nav>
 
       <!-- Action Button & Mobile Toggle -->
-      <div class="flex items-center gap-4">
-        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 text-xs uppercase font-mono tracking-wider font-semibold py-2.5 px-5 rounded-md bg-gradient-to-r from-[#0077cc] to-[#00a6ff] text-white hover:brightness-110 active:scale-95 transition-all shadow-md shadow-cyan-500/25">
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 text-xs uppercase font-mono tracking-wider font-semibold py-2 px-4 sm:py-2.5 sm:px-5 rounded-md bg-gradient-to-r from-[#0077cc] to-[#00a6ff] text-white hover:brightness-110 active:scale-95 transition-all shadow-md shadow-cyan-500/25">
           <span>Book Audit / Hire</span>
         </a>
         
@@ -158,88 +168,88 @@
     </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden border-b border-cyan-900/60 bg-[#040812]/95 px-6 py-6 font-mono text-sm space-y-4">
-      <a href="#about" class="mobile-link block text-slate-300 hover:text-cyan-400">About</a>
-      <a href="#skills" class="mobile-link block text-slate-300 hover:text-cyan-400">Arsenal</a>
-      <a href="#projects" class="mobile-link block text-slate-300 hover:text-cyan-400">Projects</a>
-      <a href="#terminal-section" class="mobile-link block text-slate-300 hover:text-cyan-400">Terminal</a>
-      <a href="#experience" class="mobile-link block text-slate-300 hover:text-cyan-400">Experience</a>
+    <div id="mobile-menu" class="hidden md:hidden border-b border-cyan-900/60 bg-[#040812]/98 px-6 py-6 font-mono text-sm space-y-4">
+      <a href="#about" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1">About</a>
+      <a href="#skills" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1">Arsenal</a>
+      <a href="#projects" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1">Projects</a>
+      <a href="#terminal-section" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1">Terminal</a>
+      <a href="#experience" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1">Experience</a>
       <a href="#contact" class="mobile-link block text-cyan-400 font-semibold pt-2"><i class="fa-solid fa-bolt mr-2"></i>Contact</a>
     </div>
   </header>
 
-  <main class="pt-24">
+  <main class="pt-16 sm:pt-24 w-full overflow-x-hidden">
     <!-- Hero Section -->
-    <section id="about" class="min-h-[calc(100vh-5rem)] flex items-center relative py-12 lg:py-20">
-      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute bottom-1/3 right-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <section id="about" class="min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)] flex items-center relative py-10 sm:py-16 lg:py-20">
+      <div class="absolute top-1/4 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-1/3 right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-cyan-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           <!-- Hero Left Column -->
-          <div class="lg:col-span-7 space-y-6 text-left">
-            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-cyan-500/40 bg-cyan-950/40 text-cyan-400 text-xs font-mono">
+          <div class="lg:col-span-7 space-y-5 sm:space-y-6 text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-cyan-500/40 bg-cyan-950/40 text-cyan-400 text-[11px] sm:text-xs font-mono">
               <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
               <span>SYSTEM ONLINE</span>
             </div>
 
-            <h1 class="text-4xl sm:text-5xl xl:text-6xl font-extrabold tracking-tight text-white leading-tight">
-              Engineering Resilient Software. <br/>
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-400 font-mono">Defending Digital Assets.</span>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight break-words">
+              Engineering Resilient Software. <br class="hidden sm:inline"/>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-400 font-mono block sm:inline mt-1">Defending Digital Assets.</span>
             </h1>
 
-            <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+            <p class="text-slate-300 text-sm sm:text-base lg:text-lg max-w-2xl leading-relaxed">
               Full-Stack Developer and Security Researcher building high-throughput web architectures, secure enterprise APIs, and defensive tooling. I don't just build software that works, I harden it to withstand attack vectors in real world production environments.
             </p>
 
             <!-- Quick Metric Badges -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-              <div class="glass-panel p-3 rounded-lg text-center">
-                <span class="text-xl font-bold font-mono text-cyan-400">100%</span>
-                <p class="text-[11px] text-slate-400 mt-0.5 uppercase tracking-wide">Execution Rate</p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-2">
+              <div class="glass-panel p-2.5 sm:p-3 rounded-lg text-center">
+                <span class="text-lg sm:text-xl font-bold font-mono text-cyan-400">100%</span>
+                <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 uppercase tracking-wide leading-tight">Execution Rate</p>
               </div>
-              <div class="glass-panel p-3 rounded-lg text-center">
-                <span class="text-xl font-bold font-mono text-cyan-300">OWASP</span>
-                <p class="text-[11px] text-slate-400 mt-0.5 uppercase tracking-wide">Standard Compliance</p>
+              <div class="glass-panel p-2.5 sm:p-3 rounded-lg text-center">
+                <span class="text-lg sm:text-xl font-bold font-mono text-cyan-300">OWASP</span>
+                <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 uppercase tracking-wide leading-tight">Standard Compliance</p>
               </div>
-              <div class="glass-panel p-3 rounded-lg text-center">
-                <span class="text-xl font-bold font-mono text-cyan-400">&lt;20ms</span>
-                <p class="text-[11px] text-slate-400 mt-0.5 uppercase tracking-wide">P99 Architecture</p>
+              <div class="glass-panel p-2.5 sm:p-3 rounded-lg text-center">
+                <span class="text-lg sm:text-xl font-bold font-mono text-cyan-400">&lt;20ms</span>
+                <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 uppercase tracking-wide leading-tight">P99 Architecture</p>
               </div>
-              <div class="glass-panel p-3 rounded-lg text-center">
-                <span class="text-xl font-bold font-mono text-cyan-300">Zero</span>
-                <p class="text-[11px] text-slate-400 mt-0.5 uppercase tracking-wide">Compromise Ops</p>
+              <div class="glass-panel p-2.5 sm:p-3 rounded-lg text-center">
+                <span class="text-lg sm:text-xl font-bold font-mono text-cyan-300">Zero</span>
+                <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 uppercase tracking-wide leading-tight">Compromise Ops</p>
               </div>
             </div>
 
             <!-- CTAs -->
-            <div class="flex flex-wrap items-center gap-4 pt-4">
-              <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-mono text-sm font-semibold bg-gradient-to-r from-[#0077cc] to-[#00a6ff] text-white hover:brightness-110 transition-all transform active:scale-95 shadow-lg shadow-cyan-500/25">
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-3 sm:pt-4">
+              <a href="#projects" class="inline-flex justify-center items-center gap-2 px-5 py-3 rounded-lg font-mono text-xs sm:text-sm font-semibold bg-gradient-to-r from-[#0077cc] to-[#00a6ff] text-white hover:brightness-110 transition-all transform active:scale-95 shadow-lg shadow-cyan-500/25">
                 <i class="fa-solid fa-code-branch"></i> Explore Featured Work
               </a>
-              <button onclick="copyResumeBio()" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-mono text-sm font-semibold border border-slate-700 bg-slate-900/90 hover:bg-slate-800 text-slate-200 transition-all active:scale-95" id="copy-summary-btn">
+              <button onclick="copyResumeBio()" class="inline-flex justify-center items-center gap-2 px-5 py-3 rounded-lg font-mono text-xs sm:text-sm font-semibold border border-slate-700 bg-slate-900/90 hover:bg-slate-800 text-slate-200 transition-all active:scale-95" id="copy-summary-btn">
                 <i class="fa-regular fa-copy"></i> <span>Copy Fast Bio</span>
               </button>
             </div>
           </div>
 
           <!-- Hero Right Column: Exact Operator Profile ID Card -->
-          <div class="lg:col-span-5 flex justify-center">
-            <div class="w-full max-w-md rounded-2xl p-7 glass-panel border border-cyan-500/30 bg-[#081120]/90 shadow-2xl relative">
+          <div class="lg:col-span-5 flex justify-center w-full">
+            <div class="w-full max-w-sm sm:max-w-md rounded-2xl p-5 sm:p-7 glass-panel border border-cyan-500/30 bg-[#081120]/90 shadow-2xl relative">
               
               <!-- Card Top Header -->
-              <div class="flex items-center justify-between border-b border-cyan-900/50 pb-4 mb-6 font-mono">
-                <span class="text-xs font-bold tracking-widest text-cyan-400">ID: SB-OPS-01</span>
-                <div class="flex items-center gap-2">
+              <div class="flex items-center justify-between border-b border-cyan-900/50 pb-3 sm:pb-4 mb-4 sm:mb-6 font-mono">
+                <span class="text-[11px] sm:text-xs font-bold tracking-widest text-cyan-400">ID: SB-OPS-01</span>
+                <div class="flex items-center gap-1.5 sm:gap-2">
                   <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                  <span class="text-[11px] tracking-wider text-cyan-300 uppercase">VERIFIED</span>
+                  <span class="text-[10px] sm:text-[11px] tracking-wider text-cyan-300 uppercase">VERIFIED</span>
                 </div>
               </div>
 
               <!-- Center Image Frame -->
               <div class="flex flex-col items-center text-center">
-                <div class="relative w-52 h-52 sm:w-60 sm:h-60 rounded-full p-2 border-2 border-dashed border-cyan-500/60 shadow-lg shadow-cyan-500/20 mb-5 flex items-center justify-center">
+                <div class="relative w-40 h-40 sm:w-52 sm:h-52 rounded-full p-1.5 sm:p-2 border-2 border-dashed border-cyan-500/60 shadow-lg shadow-cyan-500/20 mb-4 sm:mb-5 flex items-center justify-center">
                   <img 
                     src="headshot.png" 
                     alt="Iyanuoluwa Owolabi" 
@@ -248,19 +258,19 @@
                   />
                 </div>
 
-                <h2 class="text-2xl font-bold text-white tracking-tight">Iyanuoluwa Owolabi</h2>
-                <p class="text-xs font-mono text-cyan-400 mt-1 uppercase tracking-wider font-semibold">DEVELOPER &amp; SECURITY RESEARCHER</p>
+                <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Iyanuoluwa Owolabi</h2>
+                <p class="text-[11px] sm:text-xs font-mono text-cyan-400 mt-1 uppercase tracking-wider font-semibold">DEVELOPER &amp; SECURITY RESEARCHER</p>
               </div>
 
               <!-- Card Specs Bottom -->
-              <div class="grid grid-cols-2 gap-3 mt-6 pt-5 border-t border-slate-800/80 font-mono text-xs">
-                <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800">
-                  <span class="text-slate-500 block text-[10px] uppercase">FOCUS</span>
-                  <span class="text-slate-200 font-semibold">Full-Stack &amp; PenTest</span>
+              <div class="grid grid-cols-2 gap-2.5 sm:gap-3 mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-slate-800/80 font-mono text-xs">
+                <div class="bg-slate-900/80 p-2.5 sm:p-3 rounded-lg border border-slate-800">
+                  <span class="text-slate-500 block text-[9px] sm:text-[10px] uppercase">FOCUS</span>
+                  <span class="text-slate-200 font-semibold text-[11px] sm:text-xs">Full-Stack &amp; PenTest</span>
                 </div>
-                <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800">
-                  <span class="text-slate-500 block text-[10px] uppercase">STATUS</span>
-                  <span class="text-cyan-400 font-semibold">Active for Contracts</span>
+                <div class="bg-slate-900/80 p-2.5 sm:p-3 rounded-lg border border-slate-800">
+                  <span class="text-slate-500 block text-[9px] sm:text-[10px] uppercase">STATUS</span>
+                  <span class="text-cyan-400 font-semibold text-[11px] sm:text-xs">Active for Contracts</span>
                 </div>
               </div>
 
@@ -272,156 +282,156 @@
     </section>
 
     <!-- Security Arsenal & Tech Stack Section -->
-    <section id="skills" class="py-24 border-t border-slate-900 relative">
+    <section id="skills" class="py-16 sm:py-24 border-t border-slate-900 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Security Arsenal &amp; Tech Stack</h2>
-          <p class="text-slate-400 mt-3 text-sm sm:text-base">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">Security Arsenal &amp; Tech Stack</h2>
+          <p class="text-slate-400 mt-2 sm:mt-3 text-xs sm:text-sm lg:text-base">
             Battle-tested technologies and specialized utilities leveraged to build robust digital products and inspect infrastructure resilience.
           </p>
           
-          <!-- Filter Tabs -->
-          <div class="flex flex-wrap items-center justify-center gap-2 mt-8 font-mono text-xs">
-            <button onclick="filterSkills('all')" class="skill-tab-btn active px-4 py-2 rounded-md bg-cyan-500 text-slate-950 font-bold transition-all" data-category="all">
+          <!-- Filter Tabs (Horizontal Scroll on Mobile) -->
+          <div class="flex items-center justify-start sm:justify-center gap-2 mt-6 sm:mt-8 font-mono text-xs overflow-x-auto pb-2 scrollbar-none max-w-full">
+            <button onclick="filterSkills('all')" class="skill-tab-btn active shrink-0 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-md bg-cyan-500 text-slate-950 font-bold transition-all text-xs" data-category="all">
               All Units [16]
             </button>
-            <button onclick="filterSkills('frontend')" class="skill-tab-btn px-4 py-2 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 transition-all" data-category="frontend">
-              Frontend Architecture
+            <button onclick="filterSkills('frontend')" class="skill-tab-btn shrink-0 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 transition-all text-xs" data-category="frontend">
+              Frontend
             </button>
-            <button onclick="filterSkills('backend')" class="skill-tab-btn px-4 py-2 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 transition-all" data-category="backend">
+            <button onclick="filterSkills('backend')" class="skill-tab-btn shrink-0 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 transition-all text-xs" data-category="backend">
               Backend &amp; Data
             </button>
-            <button onclick="filterSkills('security')" class="skill-tab-btn px-4 py-2 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 transition-all" data-category="security">
+            <button onclick="filterSkills('security')" class="skill-tab-btn shrink-0 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 transition-all text-xs" data-category="security">
               Security &amp; Recon
             </button>
-            <button onclick="filterSkills('devops')" class="skill-tab-btn px-4 py-2 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 transition-all" data-category="devops">
-              DevOps &amp; SysAdmin
+            <button onclick="filterSkills('devops')" class="skill-tab-btn shrink-0 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 transition-all text-xs" data-category="devops">
+              DevOps
             </button>
           </div>
         </div>
 
         <!-- Skills Grid with Native Brand Icon Colors -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="skills-grid">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4" id="skills-grid">
           
           <!-- React -->
-          <div class="skill-card glass-panel p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="frontend">
+          <div class="skill-card glass-panel p-4 sm:p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="frontend">
             <div class="flex items-center justify-between mb-3">
               <i class="fa-brands fa-react text-2xl text-[#00d8ff]"></i>
               <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-cyan-950/60 text-cyan-300 border border-cyan-800">Advanced</span>
             </div>
-            <h3 class="font-bold text-slate-100 text-base">React.js &amp; SPAs</h3>
-            <p class="text-slate-400 text-xs mt-1.5">Component-driven reactive UIs, state isolation, hooks, and clean client-side security practices.</p>
+            <h3 class="font-bold text-slate-100 text-sm sm:text-base">React.js &amp; SPAs</h3>
+            <p class="text-slate-400 text-xs mt-1.5 leading-relaxed">Component-driven reactive UIs, state isolation, hooks, and clean client-side security practices.</p>
           </div>
 
           <!-- Node.js -->
-          <div class="skill-card glass-panel p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="backend">
+          <div class="skill-card glass-panel p-4 sm:p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="backend">
             <div class="flex items-center justify-between mb-3">
               <i class="fa-brands fa-node-js text-2xl text-[#22c55e]"></i>
               <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-900 text-emerald-300 border border-emerald-800/60">Advanced</span>
             </div>
-            <h3 class="font-bold text-slate-100 text-base">Node.js &amp; Express</h3>
-            <p class="text-slate-400 text-xs mt-1.5">RESTful APIs, JWT/OAuth auth architectures, rate limiting, and defensive input sanitization.</p>
+            <h3 class="font-bold text-slate-100 text-sm sm:text-base">Node.js &amp; Express</h3>
+            <p class="text-slate-400 text-xs mt-1.5 leading-relaxed">RESTful APIs, JWT/OAuth auth architectures, rate limiting, and defensive input sanitization.</p>
           </div>
 
           <!-- Python -->
-          <div class="skill-card glass-panel p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="backend security">
+          <div class="skill-card glass-panel p-4 sm:p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="backend security">
             <div class="flex items-center justify-between mb-3">
               <i class="fa-brands fa-python text-2xl text-[#facc15]"></i>
               <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-900 text-yellow-300 border border-yellow-800/60">Proficient</span>
             </div>
-            <h3 class="font-bold text-slate-100 text-base">Python Scripting</h3>
-            <p class="text-slate-400 text-xs mt-1.5">Automation scripts, security recon crawlers, packet crafting, and asynchronous data scrapers.</p>
+            <h3 class="font-bold text-slate-100 text-sm sm:text-base">Python Scripting</h3>
+            <p class="text-slate-400 text-xs mt-1.5 leading-relaxed">Automation scripts, security recon crawlers, packet crafting, and asynchronous data scrapers.</p>
           </div>
 
           <!-- Tailwind -->
-          <div class="skill-card glass-panel p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="frontend">
+          <div class="skill-card glass-panel p-4 sm:p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="frontend">
             <div class="flex items-center justify-between mb-3">
               <i class="fa-solid fa-wind text-2xl text-[#38bdf8]"></i>
               <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-cyan-950/60 text-cyan-300 border border-cyan-800">Advanced</span>
             </div>
-            <h3 class="font-bold text-slate-100 text-base">Tailwind CSS</h3>
-            <p class="text-slate-400 text-xs mt-1.5">Modern, responsive, mobile-first styling systems with custom dark mode design schemes.</p>
+            <h3 class="font-bold text-slate-100 text-sm sm:text-base">Tailwind CSS</h3>
+            <p class="text-slate-400 text-xs mt-1.5 leading-relaxed">Modern, responsive, mobile-first styling systems with custom dark mode design schemes.</p>
           </div>
 
           <!-- Burp Suite -->
-          <div class="skill-card glass-panel p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="security">
+          <div class="skill-card glass-panel p-4 sm:p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="security">
             <div class="flex items-center justify-between mb-3">
               <i class="fa-solid fa-bug text-2xl text-[#fb923c]"></i>
               <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-900 text-orange-300 border border-orange-800/60">Security</span>
             </div>
-            <h3 class="font-bold text-slate-100 text-base">Burp Suite &amp; Web Pentest</h3>
-            <p class="text-slate-400 text-xs mt-1.5">HTTP traffic interception, repeater analysis, fuzzing parameters, and CSRF/XSS exploitation discovery.</p>
+            <h3 class="font-bold text-slate-100 text-sm sm:text-base">Burp Suite &amp; Web Pentest</h3>
+            <p class="text-slate-400 text-xs mt-1.5 leading-relaxed">HTTP traffic interception, repeater analysis, fuzzing parameters, and CSRF/XSS exploitation discovery.</p>
           </div>
 
           <!-- Wireshark -->
-          <div class="skill-card glass-panel p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="security">
+          <div class="skill-card glass-panel p-4 sm:p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="security">
             <div class="flex items-center justify-between mb-3">
               <i class="fa-solid fa-network-wired text-2xl text-[#60a5fa]"></i>
               <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-900 text-blue-300 border border-blue-800/60">Security</span>
             </div>
-            <h3 class="font-bold text-slate-100 text-base">Wireshark &amp; Nmap</h3>
-            <p class="text-slate-400 text-xs mt-1.5">Deep packet inspection, port service discovery, handshake debugging, and banner grabbing.</p>
+            <h3 class="font-bold text-slate-100 text-sm sm:text-base">Wireshark &amp; Nmap</h3>
+            <p class="text-slate-400 text-xs mt-1.5 leading-relaxed">Deep packet inspection, port service discovery, handshake debugging, and banner grabbing.</p>
           </div>
 
           <!-- MongoDB / PostgreSQL -->
-          <div class="skill-card glass-panel p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="backend">
+          <div class="skill-card glass-panel p-4 sm:p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="backend">
             <div class="flex items-center justify-between mb-3">
               <i class="fa-solid fa-database text-2xl text-[#34d399]"></i>
               <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-900 text-emerald-300 border border-emerald-800/60">Databases</span>
             </div>
-            <h3 class="font-bold text-slate-100 text-base">MongoDB &amp; PostgreSQL</h3>
-            <p class="text-slate-400 text-xs mt-1.5">Schema modeling, indexing, parameterized query design, and SQLi prevention enforcement.</p>
+            <h3 class="font-bold text-slate-100 text-sm sm:text-base">MongoDB &amp; PostgreSQL</h3>
+            <p class="text-slate-400 text-xs mt-1.5 leading-relaxed">Schema modeling, indexing, parameterized query design, and SQLi prevention enforcement.</p>
           </div>
 
           <!-- Linux -->
-          <div class="skill-card glass-panel p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="devops security">
+          <div class="skill-card glass-panel p-4 sm:p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="devops security">
             <div class="flex items-center justify-between mb-3">
               <i class="fa-brands fa-linux text-2xl text-slate-200"></i>
               <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">Core</span>
             </div>
-            <h3 class="font-bold text-slate-100 text-base">Linux &amp; Shell Scripting</h3>
-            <p class="text-slate-400 text-xs mt-1.5">Ubuntu/Debian environment management, automated bash tooling, cron daemons, and SSH hardening.</p>
+            <h3 class="font-bold text-slate-100 text-sm sm:text-base">Linux &amp; Shell Scripting</h3>
+            <p class="text-slate-400 text-xs mt-1.5 leading-relaxed">Ubuntu/Debian environment management, automated bash tooling, cron daemons, and SSH hardening.</p>
           </div>
 
           <!-- Docker -->
-          <div class="skill-card glass-panel p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="devops">
+          <div class="skill-card glass-panel p-4 sm:p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="devops">
             <div class="flex items-center justify-between mb-3">
               <i class="fa-brands fa-docker text-2xl text-[#0284c7]"></i>
               <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-cyan-950/60 text-cyan-300 border border-cyan-800">DevOps</span>
             </div>
-            <h3 class="font-bold text-slate-100 text-base">Docker &amp; Containers</h3>
-            <p class="text-slate-400 text-xs mt-1.5">Containerized workflows, multi-stage microservice builds, and isolated vulnerable test labs.</p>
+            <h3 class="font-bold text-slate-100 text-sm sm:text-base">Docker &amp; Containers</h3>
+            <p class="text-slate-400 text-xs mt-1.5 leading-relaxed">Containerized workflows, multi-stage microservice builds, and isolated vulnerable test labs.</p>
           </div>
 
           <!-- Git -->
-          <div class="skill-card glass-panel p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="devops">
+          <div class="skill-card glass-panel p-4 sm:p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="devops">
             <div class="flex items-center justify-between mb-3">
               <i class="fa-brands fa-git-alt text-2xl text-[#f87171]"></i>
               <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-900 text-red-300 border border-red-800/60">VCS</span>
             </div>
-            <h3 class="font-bold text-slate-100 text-base">Git &amp; GitHub Actions</h3>
-            <p class="text-slate-400 text-xs mt-1.5">Version control branching, automated secret scanning in repositories, and continuous deployment.</p>
+            <h3 class="font-bold text-slate-100 text-sm sm:text-base">Git &amp; GitHub Actions</h3>
+            <p class="text-slate-400 text-xs mt-1.5 leading-relaxed">Version control branching, automated secret scanning in repositories, and continuous deployment.</p>
           </div>
 
           <!-- OWASP -->
-          <div class="skill-card glass-panel p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="security">
+          <div class="skill-card glass-panel p-4 sm:p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="security">
             <div class="flex items-center justify-between mb-3">
               <i class="fa-solid fa-user-shield text-2xl text-[#10b981]"></i>
               <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-900 text-emerald-300 border border-emerald-800/60">Audits</span>
             </div>
-            <h3 class="font-bold text-slate-100 text-base">AppSec &amp; OWASP Top 10</h3>
-            <p class="text-slate-400 text-xs mt-1.5">Remediation for broken access control, injection vectors, cryptographic failures, and security headers.</p>
+            <h3 class="font-bold text-slate-100 text-sm sm:text-base">AppSec &amp; OWASP Top 10</h3>
+            <p class="text-slate-400 text-xs mt-1.5 leading-relaxed">Remediation for broken access control, injection vectors, cryptographic failures, and security headers.</p>
           </div>
 
           <!-- API Design -->
-          <div class="skill-card glass-panel p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="backend frontend">
+          <div class="skill-card glass-panel p-4 sm:p-5 rounded-xl transition-all duration-300 hover:-translate-y-1" data-category="backend frontend">
             <div class="flex items-center justify-between mb-3">
               <i class="fa-solid fa-plug-circle-bolt text-2xl text-[#c084fc]"></i>
               <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-900 text-purple-300 border border-purple-800/60">API</span>
             </div>
-            <h3 class="font-bold text-slate-100 text-base">API Security &amp; Design</h3>
-            <p class="text-slate-400 text-xs mt-1.5">Strict schema validation (Joi/Zod), CORS policies, API key rotation, and HMAC webhooks.</p>
+            <h3 class="font-bold text-slate-100 text-sm sm:text-base">API Security &amp; Design</h3>
+            <p class="text-slate-400 text-xs mt-1.5 leading-relaxed">Strict schema validation (Joi/Zod), CORS policies, API key rotation, and HMAC webhooks.</p>
           </div>
 
         </div>
@@ -429,57 +439,57 @@
     </section>
 
     <!-- Featured Projects Section with Distinct Badge Colors -->
-    <section id="projects" class="py-24 border-t border-slate-900 bg-slate-950/40 relative">
+    <section id="projects" class="py-16 sm:py-24 border-t border-slate-900 bg-slate-950/40 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12">
           <div>
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-950/40 text-cyan-400 text-xs font-mono mb-3 border border-cyan-900">
               <span>&lt;shipments /&gt;</span>
             </div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Featured Projects &amp; Exploits</h2>
-            <p class="text-slate-400 mt-2 text-sm sm:text-base max-w-xl">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">Featured Projects &amp; Exploits</h2>
+            <p class="text-slate-400 mt-2 text-xs sm:text-sm lg:text-base max-w-xl">
               High-impact solutions spanning full-stack production systems, automated defensive utilities, and security tools.
             </p>
           </div>
 
-          <!-- Project filter pills -->
-          <div class="flex flex-wrap gap-2 mt-6 md:mt-0 font-mono text-xs">
-            <button onclick="filterProjects('all')" class="project-tab-btn active px-3.5 py-1.5 rounded bg-cyan-500 text-slate-950 font-bold" data-pcat="all">All</button>
-            <button onclick="filterProjects('fullstack')" class="project-tab-btn px-3.5 py-1.5 rounded bg-slate-900 text-slate-300 hover:text-cyan-400 border border-slate-800" data-pcat="fullstack">Full-Stack</button>
-            <button onclick="filterProjects('security')" class="project-tab-btn px-3.5 py-1.5 rounded bg-slate-900 text-slate-300 hover:text-cyan-400 border border-slate-800" data-pcat="security">Security Tooling</button>
-            <button onclick="filterProjects('enterprise')" class="project-tab-btn px-3.5 py-1.5 rounded bg-slate-900 text-slate-300 hover:text-cyan-400 border border-slate-800" data-pcat="enterprise">Portals &amp; SaaS</button>
+          <!-- Project filter pills (Touch horizontal scroll on small screens) -->
+          <div class="flex items-center gap-2 mt-5 md:mt-0 font-mono text-xs overflow-x-auto pb-2 scrollbar-none">
+            <button onclick="filterProjects('all')" class="project-tab-btn active shrink-0 px-3.5 py-1.5 rounded bg-cyan-500 text-slate-950 font-bold" data-pcat="all">All</button>
+            <button onclick="filterProjects('fullstack')" class="project-tab-btn shrink-0 px-3.5 py-1.5 rounded bg-slate-900 text-slate-300 hover:text-cyan-400 border border-slate-800" data-pcat="fullstack">Full-Stack</button>
+            <button onclick="filterProjects('security')" class="project-tab-btn shrink-0 px-3.5 py-1.5 rounded bg-slate-900 text-slate-300 hover:text-cyan-400 border border-slate-800" data-pcat="security">Security Tooling</button>
+            <button onclick="filterProjects('enterprise')" class="project-tab-btn shrink-0 px-3.5 py-1.5 rounded bg-slate-900 text-slate-300 hover:text-cyan-400 border border-slate-800" data-pcat="enterprise">Portals &amp; SaaS</button>
           </div>
         </div>
 
         <!-- Projects Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6" id="projects-grid">
 
           <!-- Project 1: StealthScan Recon Engine -->
           <div class="project-card glass-panel rounded-xl overflow-hidden flex flex-col justify-between border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 group" data-project-cat="security">
-            <div class="p-6">
+            <div class="p-5 sm:p-6">
               <div class="flex items-center justify-between text-xs font-mono mb-3">
                 <span class="flex items-center gap-1.5 text-cyan-400 font-semibold">
                   <i class="fa-solid fa-radar"></i> Security Utility
                 </span>
                 <span class="text-slate-500">v1.4.0</span>
               </div>
-              <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
                 StealthScan Recon Engine
               </h3>
               <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
                 Asynchronous multi-threaded target enumeration engine. Performs rapid TCP service scanning, SSL certificate fingerprinting, and sub-domain discovery with automated JSON report compilation.
               </p>
               
-              <div class="flex flex-wrap gap-2 mt-5">
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-cyan-300 border border-slate-800">Python 3</span>
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-cyan-300 border border-slate-800">Asyncio</span>
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-cyan-300 border border-slate-800">Raw Sockets</span>
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-cyan-300 border border-slate-800">CLI</span>
+              <div class="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-5">
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-cyan-300 border border-slate-800">Python 3</span>
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-cyan-300 border border-slate-800">Asyncio</span>
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-cyan-300 border border-slate-800">Raw Sockets</span>
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-cyan-300 border border-slate-800">CLI</span>
               </div>
             </div>
 
-            <div class="px-6 py-4 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between">
+            <div class="px-5 py-3 sm:px-6 sm:py-4 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between">
               <button onclick="openProjectModal('stealthscan')" class="text-xs font-mono text-cyan-400 hover:text-cyan-300 flex items-center gap-1">
                 View Architecture <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </button>
@@ -492,29 +502,29 @@
 
           <!-- Project 2: GPA Educational Management Portal -->
           <div class="project-card glass-panel rounded-xl overflow-hidden flex flex-col justify-between border border-slate-800 hover:border-emerald-500/50 transition-all duration-300 group" data-project-cat="enterprise">
-            <div class="p-6">
+            <div class="p-5 sm:p-6">
               <div class="flex items-center justify-between text-xs font-mono mb-3">
                 <span class="flex items-center gap-1.5 text-emerald-400 font-semibold">
                   <i class="fa-solid fa-graduation-cap"></i> Enterprise Web
                 </span>
                 <span class="text-slate-500">Live Client</span>
               </div>
-              <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
                 GPA Educational Management Portal
               </h3>
               <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
                 Integrated administrative web platform built for God's Power Academy. Manages student admissions, announcements dispatch, grade auditing, and responsive fee-verification channels.
               </p>
               
-              <div class="flex flex-wrap gap-2 mt-5">
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-emerald-300 border border-slate-800">Node / Express</span>
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-emerald-300 border border-slate-800">MongoDB</span>
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-emerald-300 border border-slate-800">Tailwind</span>
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-emerald-300 border border-slate-800">Auth0</span>
+              <div class="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-5">
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-emerald-300 border border-slate-800">Node / Express</span>
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-emerald-300 border border-slate-800">MongoDB</span>
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-emerald-300 border border-slate-800">Tailwind</span>
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-emerald-300 border border-slate-800">Auth0</span>
               </div>
             </div>
 
-            <div class="px-6 py-4 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between">
+            <div class="px-5 py-3 sm:px-6 sm:py-4 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between">
               <button onclick="openProjectModal('gpa')" class="text-xs font-mono text-emerald-400 hover:text-emerald-300 flex items-center gap-1">
                 View Architecture <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </button>
@@ -527,29 +537,29 @@
 
           <!-- Project 3: CryptVault Storage -->
           <div class="project-card glass-panel rounded-xl overflow-hidden flex flex-col justify-between border border-slate-800 hover:border-amber-500/50 transition-all duration-300 group" data-project-cat="fullstack">
-            <div class="p-6">
+            <div class="p-5 sm:p-6">
               <div class="flex items-center justify-between text-xs font-mono mb-3">
                 <span class="flex items-center gap-1.5 text-amber-400 font-semibold">
                   <i class="fa-solid fa-lock"></i> Cryptographic App
                 </span>
                 <span class="text-slate-500">v2.1</span>
               </div>
-              <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
                 CryptVault Zero-Knowledge Storage
               </h3>
               <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
                 Client-side AES-GCM encrypted notes and ephemeral messaging system. Keys are generated in-memory via Web Crypto API with strict zero-knowledge database persistence.
               </p>
               
-              <div class="flex flex-wrap gap-2 mt-5">
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-amber-300 border border-slate-800">React</span>
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-amber-300 border border-slate-800">Web Crypto API</span>
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-amber-300 border border-slate-800">PostgreSQL</span>
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-amber-300 border border-slate-800">Docker</span>
+              <div class="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-5">
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-amber-300 border border-slate-800">React</span>
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-amber-300 border border-slate-800">Web Crypto API</span>
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-amber-300 border border-slate-800">PostgreSQL</span>
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-amber-300 border border-slate-800">Docker</span>
               </div>
             </div>
 
-            <div class="px-6 py-4 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between">
+            <div class="px-5 py-3 sm:px-6 sm:py-4 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between">
               <button onclick="openProjectModal('cryptvault')" class="text-xs font-mono text-amber-400 hover:text-amber-300 flex items-center gap-1">
                 View Architecture <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </button>
@@ -561,28 +571,28 @@
 
           <!-- Project 4: VulnContainer & Patch Verification -->
           <div class="project-card glass-panel rounded-xl overflow-hidden flex flex-col justify-between border border-slate-800 hover:border-red-500/50 transition-all duration-300 group" data-project-cat="security">
-            <div class="p-6">
+            <div class="p-5 sm:p-6">
               <div class="flex items-center justify-between text-xs font-mono mb-3">
                 <span class="flex items-center gap-1.5 text-red-400 font-semibold">
                   <i class="fa-solid fa-shield-virus"></i> DevSecOps
                 </span>
                 <span class="text-slate-500">Demo Lab</span>
               </div>
-              <h3 class="text-xl font-bold text-white group-hover:text-red-400 transition-colors">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-red-400 transition-colors">
                 VulnContainer &amp; Patch Verification
               </h3>
               <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
                 Sandboxed Dockerized environment configured with deliberately vulnerable endpoints (IDOR, SQL injection, reflected XSS) paired with automated unit tests proving defensive remediation.
               </p>
               
-              <div class="flex flex-wrap gap-2 mt-5">
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-red-300 border border-slate-800">Docker Compose</span>
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-red-300 border border-slate-800">Python</span>
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-red-300 border border-slate-800">Bash</span>
+              <div class="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-5">
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-red-300 border border-slate-800">Docker Compose</span>
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-red-300 border border-slate-800">Python</span>
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-red-300 border border-slate-800">Bash</span>
               </div>
             </div>
 
-            <div class="px-6 py-4 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between">
+            <div class="px-5 py-3 sm:px-6 sm:py-4 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between">
               <button onclick="openProjectModal('vulnlab')" class="text-xs font-mono text-red-400 hover:text-red-300 flex items-center gap-1">
                 View Architecture <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </button>
@@ -594,28 +604,28 @@
 
           <!-- Project 5: ScoutOps Platform -->
           <div class="project-card glass-panel rounded-xl overflow-hidden flex flex-col justify-between border border-slate-800 hover:border-purple-500/50 transition-all duration-300 group" data-project-cat="fullstack">
-            <div class="p-6">
+            <div class="p-5 sm:p-6">
               <div class="flex items-center justify-between text-xs font-mono mb-3">
                 <span class="flex items-center gap-1.5 text-purple-400 font-semibold">
                   <i class="fa-solid fa-chart-line"></i> Operations Engine
                 </span>
                 <span class="text-slate-500">Enterprise</span>
               </div>
-              <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
                 ScoutOps Client Pipeline Tracker
               </h3>
               <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
                 Automated outreach prospecting CRM dashboard. Designed for targeting qualified business leads, auto-generating website performance audits, and tracking sales pipeline velocity.
               </p>
               
-              <div class="flex flex-wrap gap-2 mt-5">
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-purple-300 border border-slate-800">React</span>
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-purple-300 border border-slate-800">Express</span>
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-purple-300 border border-slate-800">REST API</span>
+              <div class="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-5">
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-purple-300 border border-slate-800">React</span>
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-purple-300 border border-slate-800">Express</span>
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-purple-300 border border-slate-800">REST API</span>
               </div>
             </div>
 
-            <div class="px-6 py-4 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between">
+            <div class="px-5 py-3 sm:px-6 sm:py-4 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between">
               <button onclick="openProjectModal('scoutops')" class="text-xs font-mono text-purple-400 hover:text-purple-300 flex items-center gap-1">
                 View Architecture <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </button>
@@ -627,28 +637,28 @@
 
           <!-- Project 6: AI Interactive Academy Lab -->
           <div class="project-card glass-panel rounded-xl overflow-hidden flex flex-col justify-between border border-slate-800 hover:border-fuchsia-500/50 transition-all duration-300 group" data-project-cat="enterprise">
-            <div class="p-6">
+            <div class="p-5 sm:p-6">
               <div class="flex items-center justify-between text-xs font-mono mb-3">
                 <span class="flex items-center gap-1.5 text-fuchsia-400 font-semibold">
                   <i class="fa-solid fa-brain"></i> AI Education
                 </span>
                 <span class="text-slate-500">Live Lab</span>
               </div>
-              <h3 class="text-xl font-bold text-white group-hover:text-fuchsia-400 transition-colors">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-fuchsia-400 transition-colors">
                 AI Interactive Academy Lab
               </h3>
               <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
                 Interactive web curriculum platform providing real-time code sandboxing, prompt engineering playgrounds, and progressive technical exercises for student cohorts.
               </p>
               
-              <div class="flex flex-wrap gap-2 mt-5">
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-fuchsia-300 border border-slate-800">Full-Stack JS</span>
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-fuchsia-300 border border-slate-800">OpenAI API</span>
-                <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-900 text-fuchsia-300 border border-slate-800">Tailwind</span>
+              <div class="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-5">
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-fuchsia-300 border border-slate-800">Full-Stack JS</span>
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-fuchsia-300 border border-slate-800">OpenAI API</span>
+                <span class="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-900 text-fuchsia-300 border border-slate-800">Tailwind</span>
               </div>
             </div>
 
-            <div class="px-6 py-4 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between">
+            <div class="px-5 py-3 sm:px-6 sm:py-4 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between">
               <button onclick="openProjectModal('aiclass')" class="text-xs font-mono text-fuchsia-400 hover:text-fuchsia-300 flex items-center gap-1">
                 View Architecture <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </button>
@@ -663,10 +673,10 @@
     </section>
 
     <!-- Interactive In-Browser Micro Terminal CLI -->
-    <section id="terminal-section" class="py-20 border-t border-slate-900 relative">
+    <section id="terminal-section" class="py-16 sm:py-20 border-t border-slate-900 relative">
       <div class="max-w-5xl mx-auto px-4 sm:px-6">
         
-        <div class="text-center mb-8">
+        <div class="text-center mb-6 sm:mb-8">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-950/50 text-cyan-400 text-xs font-mono mb-2 border border-cyan-800">
             <span>&gt;_ interactive_shell</span>
           </div>
@@ -676,52 +686,52 @@
           </p>
         </div>
 
-        <div class="glass-panel rounded-xl overflow-hidden border border-cyan-500/40 shadow-2xl bg-[#040812]">
+        <div class="glass-panel rounded-xl overflow-hidden border border-cyan-500/40 shadow-2xl bg-[#040812] w-full">
           
           <!-- CLI Top Bar -->
-          <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between font-mono text-xs text-slate-400">
+          <div class="bg-slate-900/90 px-3.5 py-2.5 sm:px-4 sm:py-3 border-b border-slate-800 flex items-center justify-between font-mono text-xs text-slate-400">
             <div class="flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-cyan-600 inline-block"></span>
-              <span class="w-3 h-3 rounded-full bg-cyan-500 inline-block"></span>
-              <span class="w-3 h-3 rounded-full bg-cyan-400 inline-block"></span>
-              <span class="ml-2 text-slate-300 font-semibold">stealth-cli (v2.4-stable)</span>
+              <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-cyan-600 inline-block"></span>
+              <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-cyan-500 inline-block"></span>
+              <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-cyan-400 inline-block"></span>
+              <span class="ml-1 sm:ml-2 text-slate-300 font-semibold text-[11px] sm:text-xs">stealth-cli (v2.4)</span>
             </div>
-            <div class="flex items-center gap-3 text-[11px]">
-              <span class="text-slate-500 hidden sm:inline">Type <code class="text-cyan-400">help</code> for command list</span>
+            <div class="flex items-center gap-2 sm:gap-3 text-[11px]">
+              <span class="text-slate-500 hidden md:inline">Type <code class="text-cyan-400">help</code> for command list</span>
               <button onclick="clearCliTerminal()" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-[10px]">Clear</button>
             </div>
           </div>
 
           <!-- CLI Body Display -->
-          <div id="cli-output" class="p-5 font-mono text-xs sm:text-sm text-slate-300 space-y-2.5 h-80 overflow-y-auto terminal-scrollbar bg-[#040812]/95">
+          <div id="cli-output" class="p-4 sm:p-5 font-mono text-xs sm:text-sm text-slate-300 space-y-2 h-64 sm:h-80 overflow-y-auto terminal-scrollbar bg-[#040812]/95">
             <div class="text-cyan-400 font-semibold">
               * StealthByte Interactive Session Initialized.
             </div>
-            <div class="text-slate-400">
-              Type <span class="text-cyan-400 font-bold">help</span> to view all available commands or click quick action pills below:
+            <div class="text-slate-400 text-xs">
+              Type <span class="text-cyan-400 font-bold">help</span> or tap command pills:
             </div>
-            <div class="flex flex-wrap gap-2 py-1">
-              <button onclick="executePillCommand('help')" class="px-2 py-1 rounded bg-slate-900 border border-slate-700 text-cyan-300 text-[11px] hover:border-cyan-400">help</button>
-              <button onclick="executePillCommand('skills')" class="px-2 py-1 rounded bg-slate-900 border border-slate-700 text-cyan-300 text-[11px] hover:border-cyan-400">skills</button>
-              <button onclick="executePillCommand('projects')" class="px-2 py-1 rounded bg-slate-900 border border-slate-700 text-cyan-300 text-[11px] hover:border-cyan-400">projects</button>
-              <button onclick="executePillCommand('audit')" class="px-2 py-1 rounded bg-slate-900 border border-slate-700 text-cyan-300 text-[11px] hover:border-cyan-400">audit</button>
-              <button onclick="executePillCommand('contact')" class="px-2 py-1 rounded bg-slate-900 border border-slate-700 text-cyan-300 text-[11px] hover:border-cyan-400">contact</button>
-              <button onclick="executePillCommand('whoami')" class="px-2 py-1 rounded bg-slate-900 border border-slate-700 text-sky-300 text-[11px] hover:border-sky-400">whoami</button>
+            <div class="flex flex-wrap gap-1.5 sm:gap-2 py-1">
+              <button onclick="executePillCommand('help')" class="px-2 py-1 rounded bg-slate-900 border border-slate-700 text-cyan-300 text-[10px] sm:text-[11px] hover:border-cyan-400">help</button>
+              <button onclick="executePillCommand('skills')" class="px-2 py-1 rounded bg-slate-900 border border-slate-700 text-cyan-300 text-[10px] sm:text-[11px] hover:border-cyan-400">skills</button>
+              <button onclick="executePillCommand('projects')" class="px-2 py-1 rounded bg-slate-900 border border-slate-700 text-cyan-300 text-[10px] sm:text-[11px] hover:border-cyan-400">projects</button>
+              <button onclick="executePillCommand('audit')" class="px-2 py-1 rounded bg-slate-900 border border-slate-700 text-cyan-300 text-[10px] sm:text-[11px] hover:border-cyan-400">audit</button>
+              <button onclick="executePillCommand('contact')" class="px-2 py-1 rounded bg-slate-900 border border-slate-700 text-cyan-300 text-[10px] sm:text-[11px] hover:border-cyan-400">contact</button>
+              <button onclick="executePillCommand('whoami')" class="px-2 py-1 rounded bg-slate-900 border border-slate-700 text-sky-300 text-[10px] sm:text-[11px] hover:border-sky-400">whoami</button>
             </div>
           </div>
 
           <!-- CLI Prompt Input Bar -->
-          <div class="bg-slate-900/80 px-4 py-3 border-t border-slate-800 flex items-center gap-2 font-mono text-xs sm:text-sm">
-            <span class="text-cyan-400 font-bold">visitor@stealth:~$</span>
+          <div class="bg-slate-900/80 p-2.5 sm:px-4 sm:py-3 border-t border-slate-800 flex items-center gap-2 font-mono text-xs sm:text-sm">
+            <span class="text-cyan-400 font-bold shrink-0">visitor@stealth:~$</span>
             <input 
               type="text" 
               id="cli-input" 
-              class="w-full bg-transparent text-cyan-300 focus:outline-none placeholder-slate-600 font-mono" 
-              placeholder="Enter command (e.g., 'help', 'skills', 'projects', 'clear')..."
+              class="w-full bg-transparent text-cyan-300 focus:outline-none placeholder-slate-600 font-mono text-xs sm:text-sm min-w-0" 
+              placeholder="Enter command..."
               autocomplete="off" 
               spellcheck="false"
             />
-            <button onclick="handleCliSubmit()" class="px-3 py-1 bg-gradient-to-r from-[#0077cc] to-[#00a6ff] hover:brightness-110 text-white rounded text-xs font-bold font-mono">
+            <button onclick="handleCliSubmit()" class="px-2.5 py-1 sm:px-3 sm:py-1 bg-gradient-to-r from-[#0077cc] to-[#00a6ff] hover:brightness-110 text-white rounded text-xs font-bold font-mono shrink-0">
               Run
             </button>
           </div>
@@ -731,31 +741,31 @@
     </section>
 
     <!-- Experience & Milestones Section -->
-    <section id="experience" class="py-24 border-t border-slate-900 relative">
+    <section id="experience" class="py-16 sm:py-24 border-t border-slate-900 relative">
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         
-        <div class="text-center mb-16">
+        <div class="text-center mb-12 sm:mb-16">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-950/40 text-cyan-400 text-xs font-mono mb-3 border border-cyan-900">
             <span>&lt;career_path /&gt;</span>
           </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Experience &amp; Track Record</h2>
-          <p class="text-slate-400 mt-2 text-sm sm:text-base">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">Experience &amp; Track Record</h2>
+          <p class="text-slate-400 mt-2 text-xs sm:text-sm lg:text-base">
             Consistent execution across application development, infrastructure auditing, and client delivery.
           </p>
         </div>
 
-        <!-- Timeline Container -->
-        <div class="relative border-l border-slate-800 pl-6 sm:pl-8 space-y-12 ml-4 sm:ml-8">
+        <!-- Timeline Container (Adjusted padding for mobile) -->
+        <div class="relative border-l border-slate-800 pl-4 sm:pl-8 space-y-8 sm:space-y-12 ml-2 sm:ml-6">
           
           <!-- Node 1 -->
           <div class="relative group">
-            <div class="absolute -left-[31px] sm:-left-[39px] top-1 w-4 h-4 rounded-full bg-slate-900 border-2 border-cyan-400 group-hover:scale-125 transition-transform"></div>
-            <div class="glass-panel p-6 rounded-xl">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs font-mono mb-2">
+            <div class="absolute -left-[23px] sm:-left-[39px] top-1 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-slate-900 border-2 border-cyan-400 group-hover:scale-125 transition-transform"></div>
+            <div class="glass-panel p-4 sm:p-6 rounded-xl">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs font-mono mb-2 gap-1 sm:gap-0">
                 <span class="text-cyan-400 font-bold">Independent Software Engineer &amp; Security Researcher</span>
-                <span class="text-slate-500 mt-1 sm:mt-0">2025 — Present</span>
+                <span class="text-slate-500">2025 — Present</span>
               </div>
-              <h3 class="text-lg font-bold text-white">Full-Stack Solutions &amp; Application Security Consulting</h3>
+              <h3 class="text-base sm:text-lg font-bold text-white">Full-Stack Solutions &amp; Application Security Consulting</h3>
               <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
                 Architecting performant web software using modern React, Node.js, and cloud containerization. Performing application penetration assessments, code reviews, and threat remediation for independent businesses and education platforms.
               </p>
@@ -769,13 +779,13 @@
 
           <!-- Node 2 -->
           <div class="relative group">
-            <div class="absolute -left-[31px] sm:-left-[39px] top-1 w-4 h-4 rounded-full bg-slate-900 border-2 border-emerald-400 group-hover:scale-125 transition-transform"></div>
-            <div class="glass-panel p-6 rounded-xl">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs font-mono mb-2">
+            <div class="absolute -left-[23px] sm:-left-[39px] top-1 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-slate-900 border-2 border-emerald-400 group-hover:scale-125 transition-transform"></div>
+            <div class="glass-panel p-4 sm:p-6 rounded-xl">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs font-mono mb-2 gap-1 sm:gap-0">
                 <span class="text-emerald-400 font-bold">Lead Developer &amp; Systems Architect</span>
-                <span class="text-slate-500 mt-1 sm:mt-0">God's Power Academy (GPA)</span>
+                <span class="text-slate-500">God's Power Academy (GPA)</span>
               </div>
-              <h3 class="text-lg font-bold text-white">GPA Web Portal Engineering &amp; Digital Transformation</h3>
+              <h3 class="text-base sm:text-lg font-bold text-white">GPA Web Portal Engineering &amp; Digital Transformation</h3>
               <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
                 Spearheaded the technical design and full deployment of the institution's digital footprint. Built modern admissions intake forms, centralized administrative dashboards, and secured data persistence.
               </p>
@@ -784,13 +794,13 @@
 
           <!-- Node 3 -->
           <div class="relative group">
-            <div class="absolute -left-[31px] sm:-left-[39px] top-1 w-4 h-4 rounded-full bg-slate-900 border-2 border-slate-600 group-hover:scale-125 transition-transform"></div>
-            <div class="glass-panel p-6 rounded-xl">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs font-mono mb-2">
+            <div class="absolute -left-[23px] sm:-left-[39px] top-1 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-slate-900 border-2 border-slate-600 group-hover:scale-125 transition-transform"></div>
+            <div class="glass-panel p-4 sm:p-6 rounded-xl">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs font-mono mb-2 gap-1 sm:gap-0">
                 <span class="text-slate-300 font-bold">Open-Source Security &amp; Tool Builder</span>
-                <span class="text-slate-500 mt-1 sm:mt-0">GitHub Community</span>
+                <span class="text-slate-500">GitHub Community</span>
               </div>
-              <h3 class="text-lg font-bold text-white">Offensive Recon Tools &amp; Defensive Blueprints</h3>
+              <h3 class="text-base sm:text-lg font-bold text-white">Offensive Recon Tools &amp; Defensive Blueprints</h3>
               <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
                 Engineered open-source scripts for port discovery, header hardening, and cryptographic experiments. Authoring step-by-step guides for developers building security-first backend architectures.
               </p>
@@ -802,29 +812,29 @@
     </section>
 
     <!-- Contact & Direct Inquiry Section -->
-    <section id="contact" class="py-24 border-t border-slate-900 bg-slate-950/60 relative">
+    <section id="contact" class="py-16 sm:py-24 border-t border-slate-900 bg-slate-950/60 relative">
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         
-        <div class="text-center mb-12">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Contact</h2>
-          <p class="text-slate-400 mt-2 text-sm sm:text-base">
+        <div class="text-center mb-8 sm:mb-12">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">Contact</h2>
+          <p class="text-slate-400 mt-2 text-xs sm:text-sm lg:text-base">
             Looking to hire a professional full-stack developer or conduct a thorough security assessment? Drop a message below.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8">
           
           <!-- Fast Channels Block -->
-          <div class="md:col-span-5 space-y-6">
-            <div class="glass-panel p-6 rounded-xl space-y-5">
+          <div class="md:col-span-5 space-y-4 sm:space-y-6">
+            <div class="glass-panel p-5 sm:p-6 rounded-xl space-y-4 sm:space-y-5">
               <h3 class="text-xs font-mono uppercase text-cyan-400 font-bold tracking-wider">Fast Channels</h3>
               
               <!-- Direct Email -->
               <div>
-                <span class="text-[11px] font-mono text-slate-500 uppercase">Direct Email</span>
-                <div class="flex items-center justify-between mt-1 bg-slate-900/90 p-2.5 rounded-lg border border-slate-800">
-                  <a href="mailto:stealthbyte.tech@gmail.com" class="text-xs font-mono text-cyan-300 hover:underline select-all" id="my-email">stealthbyte.tech@gmail.com</a>
-                  <button onclick="copyToClipboard('stealthbyte.tech@gmail.com', 'Email copied to clipboard!')" class="text-slate-400 hover:text-cyan-400 transition-colors p-1" title="Copy Email">
+                <span class="text-[10px] sm:text-[11px] font-mono text-slate-500 uppercase">Direct Email</span>
+                <div class="flex items-center justify-between mt-1 bg-slate-900/90 p-2 sm:p-2.5 rounded-lg border border-slate-800 gap-2">
+                  <a href="mailto:stealthbyte.tech@gmail.com" class="text-xs font-mono text-cyan-300 hover:underline break-all" id="my-email">stealthbyte.tech@gmail.com</a>
+                  <button onclick="copyToClipboard('stealthbyte.tech@gmail.com', 'Email copied to clipboard!')" class="text-slate-400 hover:text-cyan-400 transition-colors p-1 shrink-0" title="Copy Email">
                     <i class="fa-regular fa-copy"></i>
                   </button>
                 </div>
@@ -832,9 +842,9 @@
 
               <!-- Direct WhatsApp -->
               <div>
-                <span class="text-[11px] font-mono text-slate-500 uppercase">WhatsApp Consultations</span>
-                <div class="flex items-center justify-between mt-1 bg-slate-900/90 p-2.5 rounded-lg border border-slate-800">
-                  <span class="text-xs font-mono text-cyan-300 select-all">+234 814 916 0279</span>
+                <span class="text-[10px] sm:text-[11px] font-mono text-slate-500 uppercase">WhatsApp Consultations</span>
+                <div class="flex items-center justify-between mt-1 bg-slate-900/90 p-2 sm:p-2.5 rounded-lg border border-slate-800">
+                  <span class="text-xs font-mono text-cyan-300">+234 814 916 0279</span>
                   <a href="https://wa.me/2348149160279" target="_blank" rel="noopener" class="text-slate-400 hover:text-cyan-400 transition-colors p-1" title="Open WhatsApp Chat">
                     <i class="fa-brands fa-whatsapp text-base"></i>
                   </a>
@@ -843,8 +853,8 @@
 
               <!-- Location & Response Time -->
               <div>
-                <span class="text-[11px] font-mono text-slate-500 uppercase">Availability &amp; Ops</span>
-                <p class="text-xs font-mono text-slate-300 mt-1">
+                <span class="text-[10px] sm:text-[11px] font-mono text-slate-500 uppercase">Availability &amp; Ops</span>
+                <p class="text-xs font-mono text-slate-300 mt-1 leading-relaxed">
                   Global Remote (UTC / EST / WAT)<br/>
                   Response Window: &lt; 4 hours
                 </p>
@@ -852,13 +862,13 @@
 
               <!-- Social Profiles -->
               <div>
-                <span class="text-[11px] font-mono text-slate-500 uppercase">Network Profiles</span>
+                <span class="text-[10px] sm:text-[11px] font-mono text-slate-500 uppercase">Network Profiles</span>
                 <div class="flex items-center gap-3 mt-2 text-lg">
-                  <a href="https://github.com/Stealth-Byte7" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-all" title="GitHub">
-                    <i class="fa-brands fa-github"></i>
+                  <a href="https://github.com/Stealth-Byte7" target="_blank" rel="noopener" class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-all" title="GitHub">
+                    <i class="fa-brands fa-github text-sm sm:text-base"></i>
                   </a>
-                  <a href="https://wa.me/2348149160279" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-all" title="Direct WhatsApp">
-                    <i class="fa-brands fa-whatsapp"></i>
+                  <a href="https://wa.me/2348149160279" target="_blank" rel="noopener" class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-all" title="Direct WhatsApp">
+                    <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
                   </a>
                 </div>
               </div>
@@ -867,36 +877,36 @@
 
           <!-- Direct Form (Dispatches to WhatsApp) -->
           <div class="md:col-span-7">
-            <div class="glass-panel p-6 sm:p-8 rounded-xl">
+            <div class="glass-panel p-5 sm:p-8 rounded-xl">
               <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
                 
                 <div>
-                  <label for="name" class="block text-xs font-mono text-slate-300 mb-1.5 uppercase">Sender Identity / Company</label>
+                  <label for="name" class="block text-[11px] sm:text-xs font-mono text-slate-300 mb-1 sm:mb-1.5 uppercase">Sender Identity / Company</label>
                   <input 
                     type="text" 
                     id="name" 
                     required 
-                    class="w-full px-4 py-2.5 rounded-lg bg-slate-900/90 border border-slate-800 text-slate-200 text-sm focus:outline-none focus:border-cyan-500 font-sans transition-colors" 
+                    class="w-full px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-lg bg-slate-900/90 border border-slate-800 text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 font-sans transition-colors" 
                     placeholder="e.g. Stealth Byte (StealthByte Technologies)"
                   />
                 </div>
 
                 <div>
-                  <label for="email" class="block text-xs font-mono text-slate-300 mb-1.5 uppercase">Email</label>
+                  <label for="email" class="block text-[11px] sm:text-xs font-mono text-slate-300 mb-1 sm:mb-1.5 uppercase">Email</label>
                   <input 
                     type="email" 
                     id="email" 
                     required 
-                    class="w-full px-4 py-2.5 rounded-lg bg-slate-900/90 border border-slate-800 text-slate-200 text-sm focus:outline-none focus:border-cyan-500 font-sans transition-colors" 
+                    class="w-full px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-lg bg-slate-900/90 border border-slate-800 text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 font-sans transition-colors" 
                     placeholder="yourmail@gmail.com"
                   />
                 </div>
 
                 <div>
-                  <label for="project-type" class="block text-xs font-mono text-slate-300 mb-1.5 uppercase">Service Needed</label>
+                  <label for="project-type" class="block text-[11px] sm:text-xs font-mono text-slate-300 mb-1 sm:mb-1.5 uppercase">Service Needed</label>
                   <select 
                     id="project-type" 
-                    class="w-full px-4 py-2.5 rounded-lg bg-slate-900/90 border border-slate-800 text-slate-200 text-sm focus:outline-none focus:border-cyan-500 font-sans transition-colors"
+                    class="w-full px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-lg bg-slate-900/90 border border-slate-800 text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 font-sans transition-colors"
                   >
                     <option value="Full-Stack Web Engineering">Full-Stack Web Engineering</option>
                     <option value="Security Penetration Audit">Security Penetration Audit / Hardening</option>
@@ -907,12 +917,12 @@
                 </div>
 
                 <div>
-                  <label for="message" class="block text-xs font-mono text-slate-300 mb-1.5 uppercase">Message</label>
+                  <label for="message" class="block text-[11px] sm:text-xs font-mono text-slate-300 mb-1 sm:mb-1.5 uppercase">Message</label>
                   <textarea 
                     id="message" 
                     rows="4" 
                     required 
-                    class="w-full px-4 py-2.5 rounded-lg bg-slate-900/90 border border-slate-800 text-slate-200 text-sm focus:outline-none focus:border-cyan-500 font-sans transition-colors" 
+                    class="w-full px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-lg bg-slate-900/90 border border-slate-800 text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 font-sans transition-colors" 
                     placeholder="Describe timeline, technical specifications, or business goals..."
                   ></textarea>
                 </div>
@@ -920,7 +930,7 @@
                 <button 
                   type="submit" 
                   id="submit-btn" 
-                  class="w-full py-3.5 rounded-lg font-mono text-xs uppercase tracking-wider font-bold bg-gradient-to-r from-[#0077cc] to-[#00a6ff] hover:brightness-110 active:scale-[0.99] text-white transition-all shadow-lg shadow-cyan-500/20 flex items-center justify-center gap-2"
+                  class="w-full py-3 sm:py-3.5 rounded-lg font-mono text-xs uppercase tracking-wider font-bold bg-gradient-to-r from-[#0077cc] to-[#00a6ff] hover:brightness-110 active:scale-[0.99] text-white transition-all shadow-lg shadow-cyan-500/20 flex items-center justify-center gap-2"
                 >
                   <i class="fa-solid fa-paper-plane text-xs"></i>
                   <span>Submit</span>
@@ -934,58 +944,58 @@
     </section>
 
     <!-- Architecture Modal Dialog -->
-    <div id="project-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
-      <div class="glass-panel w-full max-w-2xl rounded-2xl overflow-hidden border border-cyan-500/40 shadow-2xl relative">
+    <div id="project-modal" class="fixed inset-0 z-50 hidden bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4">
+      <div class="glass-panel w-full max-w-2xl rounded-2xl overflow-hidden border border-cyan-500/40 shadow-2xl relative max-h-[90vh] flex flex-col">
         
-        <div class="bg-slate-900 px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+        <div class="bg-slate-900 px-4 py-3 sm:px-6 sm:py-4 border-b border-slate-800 flex items-center justify-between shrink-0">
           <div class="flex items-center gap-2">
             <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-            <span class="font-mono text-xs uppercase tracking-wider text-slate-300" id="modal-subtitle">Architecture Breakdown</span>
+            <span class="font-mono text-[11px] sm:text-xs uppercase tracking-wider text-slate-300" id="modal-subtitle">Architecture Breakdown</span>
           </div>
           <button onclick="closeProjectModal()" class="text-slate-400 hover:text-white text-lg focus:outline-none p-1">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
 
-        <div class="p-6 space-y-4 max-h-[75vh] overflow-y-auto terminal-scrollbar text-left">
-          <h3 class="text-2xl font-bold text-white font-sans" id="modal-title">Project Title</h3>
-          <p class="text-slate-300 text-sm leading-relaxed" id="modal-desc">Detailed descriptions and system design parameters.</p>
+        <div class="p-4 sm:p-6 space-y-4 overflow-y-auto terminal-scrollbar text-left flex-grow">
+          <h3 class="text-xl sm:text-2xl font-bold text-white font-sans" id="modal-title">Project Title</h3>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed" id="modal-desc">Detailed descriptions and system design parameters.</p>
           
-          <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
-            <h4 class="font-mono text-xs uppercase text-cyan-400 font-bold">Key Architectural Highlights:</h4>
+          <div class="p-3.5 sm:p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
+            <h4 class="font-mono text-[11px] sm:text-xs uppercase text-cyan-400 font-bold">Key Architectural Highlights:</h4>
             <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside font-mono" id="modal-highlights"></ul>
           </div>
 
-          <div class="flex flex-wrap gap-2 pt-2" id="modal-tags"></div>
+          <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-2" id="modal-tags"></div>
         </div>
 
-        <div class="bg-slate-900/90 px-6 py-4 border-t border-slate-800 flex justify-end gap-3">
-          <button onclick="closeProjectModal()" class="px-4 py-2 rounded-lg font-mono text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">
+        <div class="bg-slate-900/90 px-4 py-3 sm:px-6 sm:py-4 border-t border-slate-800 flex justify-end gap-2 sm:gap-3 shrink-0">
+          <button onclick="closeProjectModal()" class="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-lg font-mono text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">
             Close
           </button>
-          <a href="#contact" onclick="closeProjectModal()" class="px-4 py-2 rounded-lg font-mono text-xs font-bold bg-gradient-to-r from-[#0077cc] to-[#00a6ff] hover:brightness-110 text-white transition-colors">
-            About 
+          <a href="#contact" onclick="closeProjectModal()" class="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-lg font-mono text-xs font-bold bg-gradient-to-r from-[#0077cc] to-[#00a6ff] hover:brightness-110 text-white transition-colors">
+            About
           </a>
         </div>
       </div>
     </div>
 
     <!-- Global Toast Notification -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden max-w-sm rounded-lg border border-cyan-500/50 bg-slate-900/95 p-4 shadow-xl backdrop-blur-md transition-all font-mono text-xs text-slate-200 flex items-center gap-3">
-      <i class="fa-solid fa-circle-check text-cyan-400 text-base" id="toast-icon"></i>
-      <span id="toast-message">Successful!</span>
+    <div id="toast" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 hidden max-w-[calc(100%-2rem)] sm:max-w-sm rounded-lg border border-cyan-500/50 bg-slate-900/95 p-3 sm:p-4 shadow-xl backdrop-blur-md transition-all font-mono text-xs text-slate-200 flex items-center gap-3">
+      <i class="fa-solid fa-circle-check text-cyan-400 text-sm sm:text-base shrink-0" id="toast-icon"></i>
+      <span id="toast-message" class="break-words">Successful!</span>
     </div>
   </main>
 
-  <footer class="border-t border-slate-900 bg-[#040812] py-10 font-mono text-xs text-slate-500">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+  <footer class="border-t border-slate-900 bg-[#040812] py-8 sm:py-10 font-mono text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
       <div class="flex items-center gap-2">
-        <span class="text-slate-400">ENGINEERED FOR SPEED &amp; SECURITY</span>
+        <span class="text-slate-400 text-[11px] sm:text-xs">ENGINEERED FOR SPEED &amp; SECURITY</span>
       </div>
       <div>
-        <span>&copy; <span id="current-year"></span> StealthByte.</span>
+        <span class="text-[11px] sm:text-xs">&copy; <span id="current-year"></span> StealthByte.</span>
       </div>
-      <div class="flex items-center gap-4 text-slate-400">
+      <div class="flex items-center gap-4 text-slate-400 text-[11px] sm:text-xs">
         <a href="#about" class="hover:text-cyan-400 transition-colors">Top</a>
         <a href="#skills" class="hover:text-cyan-400 transition-colors">Arsenal</a>
         <a href="#terminal-section" class="hover:text-cyan-400 transition-colors">CLI</a>
@@ -1087,11 +1097,11 @@ Available Commands:
       const block = document.createElement('div');
       block.className = 'space-y-1';
       block.innerHTML = `
-        <div class="flex items-center gap-1.5 text-cyan-300">
+        <div class="flex items-center gap-1.5 text-cyan-300 flex-wrap">
           <span class="text-cyan-400 font-bold">visitor@stealth:~$</span>
-          <span>${escapeHtml(userCmd)}</span>
+          <span class="break-all">${escapeHtml(userCmd)}</span>
         </div>
-        <div class="text-slate-300 text-xs pl-2 border-l border-slate-800 py-1">
+        <div class="text-slate-300 text-xs pl-2 border-l border-slate-800 py-1 break-words">
           ${responseHtml}
         </div>
       `;
@@ -1115,10 +1125,10 @@ Available Commands:
       }
 
       if (cmd === 'help') {
-        appendCliResponse(cmdRaw, `<pre class="text-slate-300 font-mono whitespace-pre-wrap">${cliHelpText}</pre>`);
+        appendCliResponse(cmdRaw, `<pre class="text-slate-300 font-mono whitespace-pre-wrap text-[11px] sm:text-xs">${cliHelpText}</pre>`);
       } else if (cmd === 'skills') {
         appendCliResponse(cmdRaw, `
-          <div class="space-y-1 font-mono">
+          <div class="space-y-1 font-mono text-[11px] sm:text-xs">
             <p><span class="text-cyan-400 font-bold">[FRONTEND]</span> React.js, Tailwind CSS, Modern ES6+, REST integration</p>
             <p><span class="text-emerald-400 font-bold">[BACKEND]</span> Node.js, Express, Python, MongoDB, PostgreSQL, JWT Auth</p>
             <p><span class="text-orange-400 font-bold">[SECURITY]</span> OWASP Top 10 Auditing, Burp Suite, Wireshark, Nmap</p>
@@ -1127,7 +1137,7 @@ Available Commands:
         `);
       } else if (cmd === 'projects') {
         appendCliResponse(cmdRaw, `
-          <div class="space-y-1 font-mono">
+          <div class="space-y-1 font-mono text-[11px] sm:text-xs">
             <p class="text-white font-bold">Production Deployments &amp; Tooling:</p>
             <p>1. <span class="text-emerald-300">GPA Educational Portal</span> - School infrastructure &amp; admissions management.</p>
             <p>2. <span class="text-cyan-400">StealthScan Recon</span> - Multi-threaded target enumeration scanner.</p>
@@ -1137,7 +1147,7 @@ Available Commands:
         `);
       } else if (cmd === 'audit') {
         appendCliResponse(cmdRaw, `
-          <div class="text-xs font-mono space-y-1 text-cyan-400">
+          <div class="text-[11px] sm:text-xs font-mono space-y-1 text-cyan-400">
             <p>[+] Scanning host configuration...</p>
             <p>[+] Content Security Policy: OK</p>
             <p>[+] Strict-Transport-Security: HSTS Enabled (max-age=31536000)</p>
@@ -1147,8 +1157,8 @@ Available Commands:
         `);
       } else if (cmd === 'contact') {
         appendCliResponse(cmdRaw, `
-          <div class="space-y-1 font-mono text-xs">
-            <p><span class="text-slate-400">Email:</span> <a href="mailto:stealthbyte.tech@gmail.com" class="text-cyan-300 underline">stealthbyte.tech@gmail.com</a></p>
+          <div class="space-y-1 font-mono text-[11px] sm:text-xs">
+            <p><span class="text-slate-400">Email:</span> <a href="mailto:stealthbyte.tech@gmail.com" class="text-cyan-300 underline break-all">stealthbyte.tech@gmail.com</a></p>
             <p><span class="text-slate-400">WhatsApp:</span> <a href="https://wa.me/2348149160279" target="_blank" class="text-cyan-300 underline">+234 814 916 0279</a></p>
             <p><span class="text-slate-400">GitHub:</span> <a href="https://github.com/Stealth-Byte7" target="_blank" class="text-cyan-300 underline">github.com/Stealth-Byte7</a></p>
             <p><span class="text-slate-400">Status:</span> Open for contracts and technical security audits.</p>
@@ -1156,7 +1166,7 @@ Available Commands:
         `);
       } else if (cmd === 'whoami') {
         appendCliResponse(cmdRaw, `
-          <p class="font-mono text-xs text-slate-300">
+          <p class="font-mono text-[11px] sm:text-xs text-slate-300">
             Iyanuoluwa Owolabi | Founder of StealthByte Technologies. Full-Stack Software Developer &amp; Cybersecurity Specialist. Focused on unbreachable web platforms, API security, and robust client software.
           </p>
         `);
@@ -1284,7 +1294,7 @@ Available Commands:
       tagsContainer.innerHTML = '';
       data.tags.forEach(t => {
         const span = document.createElement('span');
-        span.className = 'text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-cyan-300 border border-slate-700';
+        span.className = 'text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:py-1 rounded bg-slate-800 text-cyan-300 border border-slate-700';
         span.textContent = t;
         tagsContainer.appendChild(span);
       });
@@ -1304,10 +1314,10 @@ Available Commands:
 
       toastMsg.textContent = message;
       if (isSuccess) {
-        toastIcon.className = 'fa-solid fa-circle-check text-cyan-400 text-base';
+        toastIcon.className = 'fa-solid fa-circle-check text-cyan-400 text-sm sm:text-base shrink-0';
         toast.style.borderColor = 'rgba(0, 166, 255, 0.4)';
       } else {
-        toastIcon.className = 'fa-solid fa-circle-exclamation text-yellow-400 text-base';
+        toastIcon.className = 'fa-solid fa-circle-exclamation text-yellow-400 text-sm sm:text-base shrink-0';
         toast.style.borderColor = 'rgba(234, 179, 8, 0.4)';
       }
 
